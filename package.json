@@ -2,7 +2,7 @@
   "name": "csharp-model-to-typescript",
   "displayName": "C# Model to TypeScript Converter",
   "description": "Converts C# model properties to TypeScript interface properties",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "Jaganedits",
   "engines": {
     "vscode": "^1.74.0"
