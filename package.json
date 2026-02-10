@@ -1,0 +1,44 @@
+{
+  "name": "csharp-model-to-typescript",
+  "displayName": "C# Model to TypeScript Converter",
+  "description": "Converts C# model properties to TypeScript interface properties",
+  "version": "0.0.3",
+  "publisher": "Jaganedits",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Other"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaganedits/csharp-model-to-typescript"
+  },
+  "icon": "csharp2type.png",
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "csharpToTs.convert",
+        "title": "Convert C# to TypeScript"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "csharpToTs.convert",
+          "when": "editorHasSelection",
+          "group": "1_modification"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "^18.0.0",
+    "typescript": "^5.3.0"
+  }
+}
